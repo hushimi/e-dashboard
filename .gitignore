@@ -1,0 +1,8 @@
+#directories
+node_modules
+dist
+assets/fonts
+
+#files
+*.tgz
+*.log

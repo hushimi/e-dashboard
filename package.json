@@ -1,0 +1,35 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "cross platform dashboard project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "version": "electron --version",
+    "rebuild": "electron-rebuild",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/images/mac_icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"CryptoApp\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.2.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "electron-builder": "^22.10.5",
+    "electron-packager": "^15.2.0",
+    "electron-rebuild": "^2.3.5",
+    "electron-reload": "^1.5.0",
+    "jquery": "^3.6.0",
+    "node-pty": "^0.10.0",
+    "rebuild": "^0.1.2",
+    "xterm": "^4.10.0",
+    "xterm-addon-fit": "^0.5.0",
+    "xterm-webfont": "^2.0.0"
+  }
+}

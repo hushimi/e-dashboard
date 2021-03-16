@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>D4shB0ard</title>
+    <link rel="stylesheet" href="./node_modules/xterm/css/xterm.css" />
+    <link rel="stylesheet" href="./assets/css/index.css">
+
+
+    <script src="./node_modules/xterm/lib/xterm.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.3.3/webcomponents-lite.js"></script> -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- side bar -->
+        <div class="side-menu">
+            <div class="clock-wrapper">
+                <div class="clock-box">
+                    <p id="date">2021 - 01 - 23 MON</p>
+                    <p id="time">12 : 09 : 10</p>
+                </div>
+            </div>
+
+            <!-- circular menu -->
+            <div class="menu" onclick="pop()">
+                <i class="fas fa-skull"></i>
+            </div>
+            <div class="menu-items">
+                <div class="items item1" id="item1">
+                    <a href="#"><i class="fas fa-code"></i></a>
+                </div>
+                <div class="items item2" id="item2">
+                    <a href="#"><i class="fas fa-terminal"></i></a>
+                </div>
+                <div class="items item3" id="item3">
+                    <a href="#"><i class="fas fa-share-alt"></i></a>
+                </div>
+                <div class="items item4" id="item4">
+                    <a href="#"><i class="fas fa-tasks"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- main contents -->
+        <div class="main">
+            <!-- main app will show here -->
+            <div id="app-container">
+
+            </div>
+
+            <!-- terminal -->
+            <div id="term-container">
+                <div id="drag"></div>
+                <div class="term-header">
+                    <div id="shell-name">Terminal</div>
+                    <button id="close-button">&times;</button>
+                </div>
+                <div id="terminal" style="font-family: 'Hack';"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // require('./assets/js/imports');
+        require('./assets/js/index');
+    </script>
+</body>
+</html>

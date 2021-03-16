@@ -1,0 +1,176 @@
+/* side bar ------------------------------------- */
+body {
+    background: #22222c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.fas {
+    color: #4ed6d8;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #353f4b;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 22px;
+    padding-left: 20px;
+    color: white;
+    text-align: left;
+    line-height: 70px;
+    background: #353f4b;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #22222c;
+    border-radius: 3px;
+}
+
+label #btn {
+    left: 20px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #4ed6d8;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+/* ~は指定した要素の後にある要素全てに適応される */
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    left: 195px;
+}
+
+#check:checked ~ section {
+    margin-left: 250px;
+}
+
+section {
+    height: 100vh;
+    transition: all .5s;
+}
+
+/* radial menu ------------------------------------- */
+.menu {
+    height: 85px;
+    width: 85px;
+    background: #2d3136;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 43px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.fa-skull {
+    position: relative;
+    top: 10px;
+    left: 21px;
+    color: #e1694f;
+}
+
+.menu-items {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu-items > div {
+    background: #2d3136;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    font-size: 43px;
+    transition: 0.5s linear;
+}
+
+.items { position: relative; }
+.item2 { bottom: 80px; }
+.item3 { bottom: 160px; }
+.item4 { bottom: 240px; }
+.item5 { bottom: 320px; }
+
+.items > a > .fas {
+    position: relative;
+    color: #22c5e6;
+    text-align: center;
+    top: 7px;
+    left: 15px;
+}
+
+/* .menu-items > div:hover {
+    background: tomato;
+} */
+.menu-items > div:hover .fas {
+    color: #740514;
+    transition: all .8s;
+}
